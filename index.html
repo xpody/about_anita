@@ -369,12 +369,32 @@ There really are no words left to say!
 
 In short, today is the day for these awesome and irreplaceable people.
 </p>
-
 <footer>
 about_anita
 </footer>
 
 </div>
 
+<script>
+
+document.addEventListener("mousemove",(e)=>{
+
+const x=(e.clientX/window.innerWidth-0.5)*20;
+const y=(e.clientY/window.innerHeight-0.5)*20;
+
+document.querySelectorAll(".floating-photo").forEach((img,index)=>{
+
+const factor=(index+1)/8;
+
+img.style.transform =
+`translate(${x*factor}px,${y*factor}px)`;
+
+});
+
+});
+
+</script>
+
 </body>
+</html>
   
