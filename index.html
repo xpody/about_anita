@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-
-<head>
-
+<!DOCTYPE html><html lang="fa" dir="rtl"><head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>about_anita</title>
-
-<style>
+<title>about_anita</title><style>
 
 *{
 margin:0;
@@ -20,47 +12,35 @@ box-sizing:border-box;
 body{
 
 font-family:Tahoma,Arial,sans-serif;
-
 overflow-x:hidden;
-
 min-height:100vh;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 padding:40px;
-
 position:relative;
 
 background:
 linear-gradient(
 135deg,
-#fdfdfd,
-#d8d8d8,
-#bababa,
-#f4f4f4,
-#a9a9a9,
+#ffffff,
+#d7d7d7,
+#bcbcbc,
+#f5f5f5,
+#9f9f9f,
 #ececec);
 
-background-size:500% 500%;
+background-size:600% 600%;
 
-animation:silverMove 18s ease infinite;
-
+animation:silverMove 20s ease infinite;
 }
 
 @keyframes silverMove{
 
 0%{background-position:0% 50%;}
-
 25%{background-position:100% 30%;}
-
 50%{background-position:100% 100%;}
-
 75%{background-position:0% 70%;}
-
 100%{background-position:0% 50%;}
 
 }
@@ -68,40 +48,31 @@ animation:silverMove 18s ease infinite;
 body::before{
 
 content:"";
-
 position:fixed;
-
-width:180%;
-
-height:180%;
-
-left:-40%;
-
-top:-40%;
+width:220%;
+height:220%;
+left:-60%;
+top:-60%;
 
 background:
 radial-gradient(circle,
-rgba(255,255,255,.7),
+rgba(255,255,255,.8),
 transparent 60%);
 
-animation:rotateLight 28s linear infinite;
+animation:rotateLight 35s linear infinite;
 
 pointer-events:none;
-
+z-index:0;
 }
 
 @keyframes rotateLight{
 
 from{
-
 transform:rotate(0deg);
-
 }
 
 to{
-
 transform:rotate(360deg);
-
 }
 
 }
@@ -109,43 +80,128 @@ transform:rotate(360deg);
 body::after{
 
 content:"";
-
 position:fixed;
-
 inset:0;
 
 background:
-
 linear-gradient(
-
 120deg,
-
 transparent 20%,
-
-rgba(255,255,255,.28) 40%,
-
-transparent 60%
-
+rgba(255,255,255,.25) 45%,
+transparent 70%
 );
 
-animation:shine 8s linear infinite;
+animation:shine 9s linear infinite;
 
 pointer-events:none;
+z-index:0;
 
 }
 
 @keyframes shine{
 
 0%{
-
 transform:translateX(-120%);
-
 }
 
 100%{
-
 transform:translateX(120%);
+}
 
+}
+
+.floating-photo{
+
+position:fixed;
+width:180px;
+height:240px;
+
+object-fit:cover;
+
+border-radius:28px;
+
+border:1px solid rgba(255,255,255,.5);
+
+background:rgba(255,255,255,.15);
+
+backdrop-filter:blur(15px);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.15),
+0 0 25px rgba(255,255,255,.4);
+
+z-index:2;
+
+}
+
+.photo1{
+top:6%;
+left:3%;
+animation:float1 11s ease-in-out infinite;
+}
+
+.photo2{
+top:35%;
+left:1%;
+animation:float2 13s ease-in-out infinite;
+}
+
+.photo3{
+bottom:6%;
+left:4%;
+animation:float3 10s ease-in-out infinite;
+}
+
+.photo4{
+top:6%;
+right:3%;
+animation:float2 12s ease-in-out infinite;
+}
+
+.photo5{
+top:35%;
+right:1%;
+animation:float3 14s ease-in-out infinite;
+}
+
+.photo6{
+bottom:6%;
+right:4%;
+animation:float1 11s ease-in-out infinite;
+}
+
+@keyframes float1{
+
+0%,100%{
+transform:translateY(0px) rotate(-4deg);
+}
+
+50%{
+transform:translateY(-30px) rotate(4deg);
+}
+
+}
+
+@keyframes float2{
+
+0%,100%{
+transform:translateY(0px) rotate(3deg);
+}
+
+50%{
+transform:translateY(-25px) rotate(-3deg);
+}
+
+}
+
+@keyframes float3{
+
+0%,100%{
+transform:translateY(0px) rotate(-2deg);
+}
+
+50%{
+transform:translateY(-35px) rotate(2deg);
 }
 
 }
@@ -155,45 +211,37 @@ transform:translateX(120%);
 position:relative;
 
 width:100%;
-
 max-width:900px;
 
 padding:55px;
 
 border-radius:30px;
 
-background:rgba(255,255,255,.33);
+background:rgba(255,255,255,.32);
 
-backdrop-filter:blur(22px);
+backdrop-filter:blur(24px);
 
-border:1px solid rgba(255,255,255,.7);
+border:1px solid rgba(255,255,255,.65);
 
 box-shadow:
-
 0 15px 50px rgba(0,0,0,.18),
+0 0 45px rgba(255,255,255,.45);
 
-0 0 40px rgba(255,255,255,.45);
+z-index:10;
 
 animation:showCard 1.3s ease;
-
 }
 
 @keyframes showCard{
 
 from{
-
 opacity:0;
-
 transform:translateY(35px);
-
 }
 
 to{
-
 opacity:1;
-
 transform:translateY(0);
-
 }
 
 }
@@ -201,25 +249,17 @@ transform:translateY(0);
 h1{
 
 text-align:center;
-
 font-size:36px;
-
 color:#4a4a4a;
-
 margin-bottom:12px;
-
-text-shadow:0 2px 8px rgba(255,255,255,.8);
 
 }
 
 h2{
 
 text-align:center;
-
 font-size:28px;
-
 color:#666;
-
 margin-bottom:45px;
 
 }
@@ -227,108 +267,70 @@ margin-bottom:45px;
 p{
 
 font-size:21px;
-
-line-height:2.25;
-
+line-height:2.2;
 text-align:center;
-
 white-space:pre-line;
-
 color:#3a3a3a;
-
-animation:textFade 2s;
-
-}
-
-@keyframes textFade{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
 
 }
 
 hr{
 
 margin:45px 0;
-
 border:none;
-
 height:1px;
 
-background:linear-gradient(to left,transparent,#888,transparent);
+background:
+linear-gradient(
+to left,
+transparent,
+#888,
+transparent);
 
 }
 
 footer{
 
 margin-top:40px;
-
 text-align:center;
-
 color:#666;
-
 font-size:15px;
-
 letter-spacing:2px;
 
 }
 
-@media(max-width:700px){
+@media(max-width:850px){
+
+.floating-photo{
+display:none;
+}
 
 .card{
-
 padding:28px;
-
 }
 
 h1{
-
 font-size:25px;
-
 }
 
 h2{
-
 font-size:20px;
-
 }
 
 p{
-
 font-size:18px;
-
-line-height:2;
-
 }
 
 }
 
-</style>
+</style></head><body><img src="IMG_20260625_153203_280.jpg" class="floating-photo photo1">
+<img src="IMG_20260625_153206_109.jpg" class="floating-photo photo2">
+<img src="IMG_20260625_153209_806.jpg" class="floating-photo photo3"><img src="IMG_20260625_153214_419.jpg" class="floating-photo photo4">
+<img src="IMG_20260625_153218_921.jpg" class="floating-photo photo5">
+<img src="IMG_20260625_153222_928.jpg" class="floating-photo photo6"><div class="card"><h1>A very special person’s day | Anita’s day</h1><h2>روز یک آدم خیلی خاص | روزِ آنیتا</h2><p>
+امروز، پنجشنبه ۴ تیر / 25 June، روز آدماییه که اسمشون آنیتاستادمی مهربون، خاص، وفادار، قابل‌اعتماد و زیبا که حضورشون آرامش میاره و انرژی خوبشون از دور هم حس می‌شه.
 
-</head>
-
-<body>
-
-<div class="card"><h1>A very special person’s day | Anita’s day</h1>
-
-<h2>روز یک آدم خیلی خاص | روزِ آنیتا</h2>
-
-<p>
-
-امروز، پنجشنبه ۴ تیر / 25 June، روز آدماییه که اسمشون آنیتاست
-
-ادمی مهربون، خاص، وفادار، قابل‌اعتماد و زیبا که حضورشون آرامش میاره و انرژی خوبشون از دور هم حس می‌شه.
-
- مخصوصا اصفهانی باشن،
+مخصوصا اصفهانی باشن،
 بدمینتون رو حرفه‌ای بازی کنن،گیتاریست باشن
 و توی نقاشی هم حسابی حرفه‌ای باشن…
 
@@ -336,15 +338,8 @@ line-height:2;
 
 خلاصه که امروز، روزِ این آدم‌های خفن و تکرارنشدنیه
 
-</p>
-
-<hr>
-
-<p>
-
-Today / June 25th , is the day for people named Anita
-
-People who are kind, special, loyal, trustworthy, and beautiful
+</p><hr><p>
+Today / June 25th , is the day for people named AnitaPeople who are kind, special, loyal, trustworthy, and beautiful
 
 Whose presence brings peace, and whose good energy can be felt from afar.
 
@@ -356,16 +351,25 @@ There really are no words left to say!
 
 In short, today is the day for these awesome and irreplaceable people.
 
-</p>
-
-<footer>
-
+</p><footer>
 about_anita
+</footer></div><script>
 
-</footer>
+document.addEventListener("mousemove",(e)=>{
 
-</div>
+const x=(e.clientX/window.innerWidth-0.5)*20;
+const y=(e.clientY/window.innerHeight-0.5)*20;
 
-</body>
+document.querySelectorAll(".floating-photo").forEach((img,index)=>{
 
+const factor=(index+1)/8;
+
+img.style.transform=
+`translate(${x*factor}px,${y*factor}px)`;
+
+});
+
+});
+
+</script></body>
 </html>
